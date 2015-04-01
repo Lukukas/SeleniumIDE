@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://members-ua1/" />
+<title>GSFK-8</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">GSFK-8</td></tr>
+</thead><tbody>
+<!--This is for running the K-8 GSF. This will also run two additional SFA Program Reports. Running under Jen/Jls-->
+<tr>
+	<td>open</td>
+	<td>/Home.aspx</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ContentPlaceHolder1_txtUsername</td>
+	<td>${userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ContentPlaceHolder1_txtPassword</td>
+	<td>${userPassword}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ContentPlaceHolder1_btnLogin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPositionTop</td>
+	<td>id=processingDiv</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_RadMenu1_i7_i0_reportCenterTemplate_lbctl00_ctl00_ctl00_ContentPlaceHolder1_RadMenu1_i7SFA_Program</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_107</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SchoolYearId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SchoolYearId</td>
+	<td>label=2014/2015</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SchoolYearId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_btnFormat1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//td[@onclick=&quot;openGSFStudentList_2013(2651,-1,'70_2014/2015','3_2','200_K','1000_43-48','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_', '-1_','-1_');&quot;]</td>
+	<td></td>
+</tr>
+<!--Verify Mastery Line-->
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__0']/td[4]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__1']/td[5]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__2']/td[6]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__2']/td[7]@class</td>
+	<td>GSFBottom</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__3']/td[8]@class</td>
+	<td>GSFLeftGrade</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__4']/td[8]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__4']/td[9]@class</td>
+	<td>GSFBottom</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__5']/td[10]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__5']/td[11]@class</td>
+	<td>GSFBottom</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__6']/td[12]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__6']/td[13]@class</td>
+	<td>GSFBottom</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__7']/td[14]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__8']/td[15]@class</td>
+	<td>GSFLeftGrade</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__9']/td[15]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__10']/td[15]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__11']/td[16]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__12']/td[16]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__13']/td[17]@class</td>
+	<td>GSFLeftGrade</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__14']/td[17]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__15']/td[17]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__16']/td[18]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__17']/td[18]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__18']/td[19]@class</td>
+	<td>GSFLeftGrade</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__19']/td[19]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__20']/td[19]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__21']/td[20]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__22']/td[20]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__23']/td[21]@class</td>
+	<td>GSFLeftGrade</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__24']/td[21]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__25']/td[21]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__26']/td[22]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__27']/td[22]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__28']/td[23]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<!--Check and Verify the numbers match on the report.-->
+<tr>
+	<td>click</td>
+	<td>//td[@onclick=&quot;openGSFStudentList_2013(2651,-1,'70_2014/2015','2_1','300_1','200_1-5','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_', '-1_','-1_');&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=JONES, AUDREY</td>
+	<td>JONES, AUDREY</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=LANDO-ALFAFARA, TAYZN</td>
+	<td>LANDO-ALFAFARA, TAYZN</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=MADRON, JEWEL</td>
+	<td>MADRON, JEWEL</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=MADRON, LILLIAN</td>
+	<td>MADRON, LILLIAN</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_btnFormat1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>css=img[alt=&quot;Processing...&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//td[@onclick=&quot;openGSFStudentList_2013(2651,-1,'70_2014/2015','3_2','200_K','1000_43-48','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_', '-1_','-1_');&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//td[@onclick=&quot;openGSFStudentList_2013(2651,-1,'70_2014/2015','3_2','200_K','1000_43-48','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_', '-1_','-1_');&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=HENSLEY, AIDAN</td>
+	<td>HENSLEY, AIDAN</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=HERNANDEZ, MATTHEW</td>
+	<td>HERNANDEZ, MATTHEW</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=PIERSON, MILEY</td>
+	<td>PIERSON, MILEY</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=WILLIAMS, TRINITY</td>
+	<td>WILLIAMS, TRINITY</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=HENSLEY, AIDAN</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td.StudentProfileTableHeadingRow</td>
+	<td>Ware Elementary</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td.StudentProfilePhoto</td>
+	<td>AIDAN HENSLEY</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ContentPlaceHolder1_btnClose</td>
+	<td></td>
+</tr>
+<!--Create PDF and Excel Reports-->
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_btnFormat1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>css=img[alt=&quot;Processing...&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//td[@onclick=&quot;openGSFStudentList_2013(2651,-1,'70_2014/2015','3_2','200_K','1000_43-48','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_', '-1_','-1_');&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_btnPDF</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_btnExcel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ContentPlaceHolder1_btnClose</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

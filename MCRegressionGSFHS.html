@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://members-ua1/" />
+<title>GSFHS</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">GSFHS</td></tr>
+</thead><tbody>
+<!--This is for running the High School GSF-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<!--Logout and Login with High School -->
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ContentPlaceHolder1_txtUsername</td>
+	<td>${userNameHS}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ContentPlaceHolder1_txtPassword</td>
+	<td>${userPasswordHS}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ContentPlaceHolder1_btnLogin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPositionTop</td>
+	<td>id=processingDiv</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_RadMenu1_i7_i0_reportCenterTemplate_lbctl00_ctl00_ctl00_ContentPlaceHolder1_RadMenu1_i7SFA_Program</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPositionTop</td>
+	<td>id=processingDiv</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_115</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_cellReportType115 &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SchoolYearId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SchoolYearId</td>
+	<td>label=2014/2015</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SchoolYearId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_btnFormat1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//td[@onclick=&quot;openGSFStudentList_2013HS(1000471,-1,'70_2014/2015','2_1','1100_9','1899_6','258010_Mader, Christopher ','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_', '-1_','-1_');&quot;]</td>
+	<td></td>
+</tr>
+<!--Verify Mastery Line-->
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__0']/td[10]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__1']/td[10]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__2']/td[10]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__3']/td[10]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__4']/td[11]@class</td>
+	<td>GSFLeftGrade</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__5']/td[11]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__6']/td[11]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__7']/td[11]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__8']/td[11]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__9']/td[12]@class</td>
+	<td>GSFLeftGrade</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__10']/td[12]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__11']/td[12]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__12']/td[12]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__13']/td[12]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__14']/td[13]@class</td>
+	<td>GSFLeftGrade</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__15']/td[13]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__16']/td[13]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__17']/td[13]@class</td>
+	<td>GSFLeft</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__18']/td[13]@class</td>
+	<td>GSF</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//tr[@id='ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_Grid0_ctl00__19']/td[14]@class</td>
+	<td>GSF</td>
+</tr>
+<!--Verify Number of students above and below the line-->
+<tr>
+	<td>click</td>
+	<td>//td[@onclick=&quot;openGSFStudentList_2013HS(1000471,-1,'70_2014/2015','2_1','1100_9','1899_6','258010_Mader, Christopher ','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_', '-1_','-1_');&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Juan, Esperanza O.</td>
+	<td>Juan, Esperanza O.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Juan, Esperanza O.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td.StudentProfileTableHeadingRow</td>
+	<td>Baboquivari High School</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ContentPlaceHolder1_btnClose</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_btnFormat1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>css=img[alt=&quot;Processing...&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//td[@onclick=&quot;openGSFStudentList_2013HS(1000471,-1,'70_2014/2015','2_1','1100_9','1899_6','258010_Mader, Christopher ','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_', '-1_','-1_');&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//td[@onclick=&quot;openGSFStudentList_2013HS(1000471,-1,'70_2014/2015','2_1','1200_10','2400_PH','258010_Mader, Christopher ','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_', '-1_','-1_');&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Leonard Jr, Allen</td>
+	<td>Leonard Jr, Allen</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Lopez, Warren H.</td>
+	<td>Lopez, Warren H.</td>
+</tr>
+<!--Create PDF and Excel-->
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ContentPlaceHolder1_btnClose</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_btnFormat1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>css=img[alt=&quot;Processing...&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//td[@onclick=&quot;openGSFStudentList_2013HS(1000471,-1,'70_2014/2015','2_1','1100_9','1899_6','258010_Mader, Christopher ','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_','-1_', '-1_','-1_');&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_btnPDF</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>30000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_btnExcel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ContentPlaceHolder1_btnClose</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

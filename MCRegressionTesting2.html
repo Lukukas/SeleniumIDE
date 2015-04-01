@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://members-ua1/" />
+<title>Manage Students</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Manage Students</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/Home.aspx</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ContentPlaceHolder1_txtUsername</td>
+	<td>${userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ContentPlaceHolder1_txtPassword</td>
+	<td>${userPassword}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ContentPlaceHolder1_btnLogin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPositionTop</td>
+	<td>id=processingDiv</td>
+	<td>0</td>
+</tr>
+<!--Mastery selections change based on Products customer has (REHS, Spanish)-->
+<tr>
+	<td>store</td>
+	<td>No Change,MND,K1,K2,K3,RR: 1-5,RR: 6-10,RR: 11-15 e|11-16 s,RR: 16-20 e|17-22 s,RR: 21-25 e|23-28 s,RR: 26-31 e|29-34 s,RR: 32-37 e|35-39 s,RR: 38-42 e|40-44 s,RE: 1,RR: 43-48 e|45-48 s/ RE: 1,RW: 2-1,RW: 2-2,RW: 3-1,RE: 2,RE: 3,RW: 3-2/ RE: 2-3,RW: 4-1,RE: 4,RW: 4-2/ RE: 4,RW: 5-1,RE: 5,RW: 5-2/ RE: 5,RW/ RE: 6+,RW/ RE: 7+,RW/ RE: 8+,REHS: 9,REHS: 10,REHS: 11,REHS: 12</td>
+	<td>masteryWithHSWithSP</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>No Change,MND,K1,K2,K3,RR: 1-5,RR: 6-10,RR: 11-15 e|11-16 s,RR: 16-20 e|17-22 s,RR: 21-25 e|23-28 s,RR: 26-31 e|29-34 s,RR: 32-37 e|35-39 s,RR: 38-42 e|40-44 s,RE: 1,RR: 43-48 e|45-48 s/ RE: 1,RW: 2-1,RW: 2-2,RW: 3-1,RE: 2,RE: 3,RW: 3-2/ RE: 2-3,RW: 4-1,RE: 4,RW: 4-2/ RE: 4,RW: 5-1,RE: 5,RW: 5-2/ RE: 5,RW/ RE: 6+,RW/ RE: 7+,RW/ RE: 8+</td>
+	<td>masteryWithoutHSWithSP</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>No Change,MND,K1,K2,K3,RR: 1-5,RR: 6-10,RR: 11-15,RR: 16-20,RR: 21-25,RR: 26-31,RR: 32-37,RR: 38-42,RE: 1,RR: 43-48/ RE: 1,RW: 2-1,RW: 2-2,RW: 3-1,RE: 2,RE: 3,RW: 3-2/ RE: 2-3,RW: 4-1,RE: 4,RW: 4-2/ RE: 4,RW: 5-1,RE: 5,RW: 5-2/ RE: 5,RW/ RE: 6+,RW/ RE: 7+,RW/ RE: 8+</td>
+	<td>masteryWithoutHSWithoutSP</td>
+</tr>
+<!--This is to verify functionality of the Student Center > Manage Students screen-->
+<tr>
+	<td>open</td>
+	<td>/Home.aspx</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_RadMenu1_i3_i0_studentCenterTemplate_lbctl00_ctl00_ctl00_ContentPlaceHolder1_RadMenu1_i3Manage_Students</td>
+	<td></td>
+</tr>
+<!--This ensures we always check the same date and grading period. May need to be altered as we move forward.-->
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SearchContentPlaceHolder_SimpleSearch_ddlGradingPeriod</td>
+	<td>label=3rd</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SearchContentPlaceHolder_SimpleSearch_ddlSchoolYear</td>
+	<td>label=2014/2015</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_btnSearch</td>
+	<td></td>
+</tr>
+<!--Always good to wait for the element you are going to click next to appear.-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SearchContentPlaceHolder_SearchResults_gvSearchResults_ctl00_ctl04_columnSelectCheckBox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SearchContentPlaceHolder_SearchResults_gvSearchResults_ctl00_ctl04_columnSelectCheckBox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SearchContentPlaceHolder_Actions_anchorEditAcademic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_btnSave</td>
+	<td></td>
+</tr>
+<!--Check Mastery Levels to be sure they are consistent.-->
+<tr>
+	<td>verifySelectOptions</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_EditContentPlaceHolder1_ddlMastery</td>
+	<td>${masteryWithoutHSWithoutSP}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_EditContentPlaceHolder1_ddlMastery</td>
+	<td>label=RW: 5-1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_btnClose</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_btnClose</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SearchContentPlaceHolder_SearchResults_gvSearchResults_ctl00_ctl04_columnSelectCheckBox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SearchContentPlaceHolder_SearchResults_gvSearchResults_ctl00_ctl04_columnSelectCheckBox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SearchContentPlaceHolder_Actions_anchorStudentGPData</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_EditContentPlaceHolder1_ddlMasteryLevel3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifySelectedLabel</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_EditContentPlaceHolder1_ddlMasteryLevel3</td>
+	<td>RW: 5-1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_btnClose</td>
+	<td></td>
+</tr>
+<!--Should really build in tests for mastery with SP and with HS since there are three different ways it can appear.-->
+</tbody></table>
+</body>
+</html>

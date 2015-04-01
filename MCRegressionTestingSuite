@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="MCRegressionLogin.html">Login</a></td></tr>
+<tr><td><a href="MCRegressionAddTicket.html">Create Service Ticket</a></td></tr>
+<tr><td><a href="MCRegressionTesting1.html">Manage Staff</a></td></tr>
+<tr><td><a href="MCRegressionTesting2.html">Manage Students</a></td></tr>
+<tr><td><a href="MCRegressionRR4Lesson.html">AddNewLessonRR4</a></td></tr>
+<tr><td><a href="MCRegressionRW4Lesson.html">AddNewLessonRW4</a></td></tr>
+<tr><td><a href="MCRegressionGSFK-8.html">GSFK-8</a></td></tr>
+<tr><td><a href="MCRegressionGSFMS.html">GSFMS</a></td></tr>
+<tr><td><a href="MCRegressionGSFHS.html">GSFHS</a></td></tr>
+<tr><td><a href="MCRegressionSummaryReports.html">SummaryReports</a></td></tr>
+<tr><td><a href="MCRegressionSummaryReportsScheduled.html">SummaryReports(Scheduled)</a></td></tr>
+</tbody></table>
+</body>
+</html>

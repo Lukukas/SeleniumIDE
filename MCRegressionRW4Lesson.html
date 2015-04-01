@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://members-ua1/" />
+<title>AddNewLessonRW4</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">AddNewLessonRW4</td></tr>
+</thead><tbody>
+<!--This is to verify functionality of Adding lessons for a RW4 teacher.-->
+<tr>
+	<td>open</td>
+	<td>/Home.aspx</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ContentPlaceHolder1_txtUsername</td>
+	<td>${userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ContentPlaceHolder1_txtPassword</td>
+	<td>${userPassword}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ContentPlaceHolder1_btnLogin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPositionTop</td>
+	<td>id=processingDiv</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_RadMenu1_i5_i0_classroomCenterTemplate_lbctl00_ctl00_ctl00_ContentPlaceHolder1_RadMenu1_i5Manage_Lessons</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_ddlGradingPeriod</td>
+	<td>label=1st</td>
+</tr>
+<tr>
+	<td>waitForElementPositionTop</td>
+	<td>id=processingDiv</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_lstClassrooms</td>
+	<td>label=Akard, Lisa , Period 2 Room: 33 (Reading Wings 4th Edition - '4-1')</td>
+</tr>
+<tr>
+	<td>waitForElementPositionTop</td>
+	<td>id=processingDiv</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_lnkNewLesson</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_img1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_img1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//a[contains(text(),'Start Lesson')])[50]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Start Lesson')])[50]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_ddlStrategy</td>
+	<td>label=Clarifying - Literature</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_ddlSubStrategy</td>
+	<td>label=Reread - Sentence Level</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_ddlTeamGoal</td>
+	<td>label=Complete Tasks</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_ddlTeamGoalBehavior</td>
+	<td>label=Restate tasks</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>30000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=span.rtsTxt</td>
+	<td></td>
+</tr>
+<!--Lesson Created! Now to fill it in with information!-->
+<!--Creating a team-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_RadTabStrip1']/div/ul/li[2]/a/span/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtNewTeam</td>
+	<td>Team 1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_btnNewTeam</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPositionTop</td>
+	<td>id=processingDiv</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_Unassigned,3012905</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_Unassigned,4092483</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_Unassigned,4010580</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_ddlTeams</td>
+	<td>label=Team 1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_btnAssignToTeam</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPositionTop</td>
+	<td>id=processingDiv</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_3012905,NumberedHead</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_4010580,NumberedHead</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_4092483,NumberedHead</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_btnDiskSave2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPositionTop</td>
+	<td>id=processingDiv</td>
+	<td>0</td>
+</tr>
+<!--Add scores to TCR-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_RadTabStrip1']/div/ul/li[3]/a/span/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,3012905,178,70,100,10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,3012905,178,70,100,10</td>
+	<td>70</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,3012905,179,70,100,10</td>
+	<td>70</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,3012905,180,70,100,10</td>
+	<td>70</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,3012905,181,70,100,10</td>
+	<td>70</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,3012905,182,70,100,10</td>
+	<td>70</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,3012905,183,1,5,1</td>
+	<td>70</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,3012905,186,1,100,1</td>
+	<td>70</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,3012905,189,1,100,1</td>
+	<td>70</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,3012905,190,1,100,1</td>
+	<td>70</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,3012905,195,1,500,1</td>
+	<td>70</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_TeamScore,25035,191,70,100,10</td>
+	<td>90</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4010580,178,70,100,10</td>
+	<td>90</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4010580,179,70,100,10</td>
+	<td>90</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4010580,180,70,100,10</td>
+	<td>90</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4010580,181,70,100,10</td>
+	<td>90</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4010580,182,70,100,10</td>
+	<td>90</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4010580,183,1,5,1</td>
+	<td>90</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4010580,186,1,100,1</td>
+	<td>90</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4010580,189,1,100,1</td>
+	<td>90</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4010580,190,1,100,1</td>
+	<td>90</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4010580,195,1,500,1</td>
+	<td>90</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4092483,178,70,100,10</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4092483,179,70,100,10</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4092483,180,70,100,10</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4092483,181,70,100,10</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4092483,182,70,100,10</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4092483,183,1,5,1</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4092483,186,1,100,1</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4092483,189,1,100,1</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4092483,190,1,100,1</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4092483,195,1,500,1</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_btnDiskSave3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPositionTop</td>
+	<td>id=processingDiv</td>
+	<td>0</td>
+</tr>
+<!--Check to make sure it highlights scores that can't be input-->
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_lblScoreValidationWarning</td>
+	<td>Invalid scores: Highlighted cells were not saved. Please enter valid scores and re-save the form.</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,3012905,183,1,5,1@style</td>
+	<td>*red*</td>
+</tr>
+<!--Correct bad scores-->
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,3012905,183,1,5,1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4010580,183,1,5,1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_StudentScore,4092483,183,1,5,1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_btnDiskSave3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPositionTop</td>
+	<td>id=processingDiv</td>
+	<td>0</td>
+</tr>
+<!--Create Reports for Review-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_RadTabStrip1']/div/ul/li[4]/a/span/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_lnkCycleResultsPDF</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_lnkStudentCertificatesPDF</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_lnkCycleResults</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_lnkStudentCertificates</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>240000</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

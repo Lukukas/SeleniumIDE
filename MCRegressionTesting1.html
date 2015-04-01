@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://members-ua1/" />
+<title>Manage Staff</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Manage Staff</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/Home.aspx</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ContentPlaceHolder1_txtUsername</td>
+	<td>${userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ContentPlaceHolder1_txtPassword</td>
+	<td>${userPassword}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ContentPlaceHolder1_btnLogin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPositionTop</td>
+	<td>id=processingDiv</td>
+	<td>0</td>
+</tr>
+<!--Check Staff Page. Make sure it loads and that you can search and view staff members-->
+<tr>
+	<td>open</td>
+	<td>/Home.aspx</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_ctl00_ctl00_ContentPlaceHolder1_RadMenu1_i2_i0_frontOfficeTemplate_lbctl00_ctl00_ctl00_ContentPlaceHolder1_RadMenu1_i2Manage_Staff</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_btnSearch</td>
+	<td></td>
+</tr>
+<!--Check to make sure search loaded staff members-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SearchContentPlaceHolder_SearchResults_gvStaffSearchResult_ctl00_ctl06_columnSelectCheckBox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SearchContentPlaceHolder_SearchResults_gvStaffSearchResult_ctl00_ctl06_columnSelectCheckBox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_NestedContentPlaceHolder1_NestedContentPlaceHolder1_1_SearchContentPlaceHolder_Actions_anchorEditStaff</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_EditContentPlaceHolder1_txtTitle</td>
+	<td></td>
+</tr>
+<!--Check to make sure the Edit Staff page loaded, has the appropriate staff member's information, and has editable fields in it-->
+<tr>
+	<td>verifyAttribute</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_EditContentPlaceHolder1_txtFirstName@value</td>
+	<td>Aimee</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_EditContentPlaceHolder1_txtLastName@value</td>
+	<td>Arent</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_EditContentPlaceHolder1_txtEmail@value</td>
+	<td>lfsschooltest@successforall.org</td>
+</tr>
+<tr>
+	<td>verifySelectedLabel</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_EditContentPlaceHolder1_ddlRole</td>
+	<td>Tutor</td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_EditContentPlaceHolder1_txtFirstName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_EditContentPlaceHolder1_txtLastName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_EditContentPlaceHolder1_txtEmail</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifySelectOptions</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_RadWindowContentPlaceHolder1_RadWindowContentPlaceHolder2_EditContentPlaceHolder1_ddlRole</td>
+	<td>,Administrator,Assistant Principal,Assistant Superintendent,Billing Contact,Counselor,Director,Director of Curriculum,District Contact,District Coordinator,Facilitator,Grant Coordinator,Literacy Coach,Org Contact,Other,Preschool Director,Principal,PT:M Certified Coach,School-based Coach,Schoolwide Solutions Coordinator,Secretary,SFAF- Point Coach,Student,Superintendent,Teacher,Tech Contact,Title One Office Contact,Tutor</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_ctl00_ctl00_ContentPlaceHolder1_btnClose</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
